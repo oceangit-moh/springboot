@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hi
+
+Welcome to courses ! // ${cName}
 
 </body>
 </html>
