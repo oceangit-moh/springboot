@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -7,6 +8,8 @@ public class Customers {
 	private int custId;
 	private String custName;
 	private String courseName;
+	@Autowired
+	private Technologies techDetail;
 	
 	public int getCustId() {
 		return custId;
@@ -26,8 +29,15 @@ public class Customers {
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
+	public Technologies getTechDetail() {
+		return techDetail;
+	}
+	public void setTechDetail(Technologies techDetail) {
+		this.techDetail = techDetail;
+	}
 	
 	public void display() {
 		System.out.println("Customers object returned successfully");
+		techDetail.tech();
 	}
 }
